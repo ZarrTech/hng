@@ -55,33 +55,23 @@ section{
     
 
 .info{
-    text-align: start;
+    text-align: center;
 
     .info-text{
         text-align: start;
         & h1{
           font-size: 2rem;
-          color: var(--primaryTc);
+          color: var(--textColor);
           animation: slidetop 2s ease forwards;
           font-family: 'poppins';
-
-          & span{
-            font-size: 25px;
-            color: var(--textColor);
-          }
         }
 
         & h3{
            margin-top: 1rem;
-           color: var(--primaryTc);
+           color: var(--textColor);
            font-size: 2rem;
            animation: zoomIn 2.5s ease forwards;
            font-family: 'poppins';
-
-           & span{
-            font-size: 25px;
-            color: var(--textColor);
-           }
         }
     }
 
