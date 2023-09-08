@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Tangerine:wght@400;700&display=swap');
+
+
+:root{
+    --bgColor: rgb(32, 33, 36); 
+    --primaryTc: #fff;
+    --textColor:  rgb(243, 174, 84);
+    --fontSizePrimary: 'tangerine', sans-serif;
+    --boxShadow: 1px 1px 7px 1px ;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--bgColor);
+}
+
+section{
+    position: relative;
+    width: 90%;
+    max-width: 900px;
+    margin: 5rem auto;
+    box-shadow: var(--boxShadow)
+    /* padding: 1rem; */
+
+}
+
+.userId{
+    position: absolute;
+    color: var(--primaryTc);
+    padding: 5px 10px;
+    font-family: var(--fontSizePrimary);
+    font-size: 40px;
+    background-color: var(--bgColor);
+    margin: -10px;
+    
+    
+}
+
+.hero{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+}
+
+
+    
+
+.info{
+    text-align: start;
+
+    .info-text{
+        text-align: start;
+        & h1{
+          font-size: 2rem;
+          color: var(--primaryTc);
+          animation: slidetop 2s ease forwards;
+          font-family: 'poppins';
+
+          & span{
+            font-size: 25px;
+            color: var(--textColor);
+          }
+        }
+
+        & h3{
+           margin-top: 1rem;
+           color: var(--primaryTc);
+           font-size: 2rem;
+           animation: zoomIn 2.5s ease forwards;
+           font-family: 'poppins';
+
+           & span{
+            font-size: 25px;
+            color: var(--textColor);
+           }
+        }
+    }
+
+    .day{
+        color: var(--textColor);
+        font-family: 'poppins';
+        font-size: 30px;
+        margin-top: 1rem;
+        text-decoration: underline;
+        margin-bottom: 2rem;
+    }
+    
+    .github{
+        text-decoration: none;
+        margin-top: 4rem;
+        color: var(--primaryTc);
+        padding: 1rem 2rem;
+        border:1px solid var(--textColor);
+    }
+
+    .github:hover{
+            color: var(--textColor);
+        }
+}
+
+.imageSection{
+    width: 350px;
+    margin-top: 3rem;
+    animation:floatImage 4s ease-in infinite;
+
+
+    & img{
+    width: 100%;
+    border-radius: 10rem;
+    opacity: 0;
+    animation: zoomIn 1s ease forwards
+}
+}
+
+.date{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    font-size: 20px;
+    gap: 3rem;
+    margin-top: -10px;
+    background-color: var(--bgColor);
+    padding: 0 10px;
+    color: rgb(243, 174, 84);
+    font-family: 'poppins';
+
+}
+
+@keyframes zoomIn{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+
+    }
+
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes floatImage{
+    0%{
+        transform: translateY(0);
+    }
+
+    50%{
+        transform: translateY(-7px);
+    }
+
+    100%{
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes slidetop {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+
+@media screen and (max-width: 900px) {
+    .info{
+        margin-top: 4rem;
+        text-align: center;
+
+        .info-text{
+            & h1{
+            font-size: 1.3rem;
+
+            & span{
+                font-size: 1.3rem;
+            }
+        }
+            & h3{
+                font-size: 1.3rem;
+
+                & span{
+                    font-size: 1.3rem;
+                }
+            }
+        }
+
+        .line{
+            width: 70%;
+            height: 1px;
+            margin: 1rem auto;
+            background-color: var(--primaryTc);
+        }
+        
+    }
+    .hero{
+        flex-direction: column;
+    }
+}
+
+
+@media screen and (max-width: 380px) {
+    .info{
+        margin-top: 4rem;
+        text-align: center;
+
+        .info-text{
+            & h1{
+            font-size: 1rem;
+
+            & span{
+                font-size: 1rem;
+            }
+        }
+            & h3{
+                font-size: 1rem;
+
+                & span{
+                    font-size: 1rem;
+                }
+            }
+        }
+
+        .line{
+            width: 70%;
+            height: 1px;
+            margin: 1rem auto;
+            background-color: var(--primaryTc);
+        }
+        
+    }
+
+    .imageSection{
+        width: 270px;
+    }
+
+    .info{
+
+          & h3{
+            font-size: 20px;
+        }
+    }
+}
+
+
+
+
