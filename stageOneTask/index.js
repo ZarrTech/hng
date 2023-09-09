@@ -8,7 +8,7 @@ const dayList = [
     'Wednesday', 
     'Thursday', 
     'Friday', 
-    'Saturuday'
+    'Saturday'
 ]
 
 document.querySelector('[data-testid="currentDayOfTheWeek"]').innerHTML = `It's ${dayList[
