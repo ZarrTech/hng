@@ -23,20 +23,18 @@ section{
     position: relative;
     width: 90%;
     max-width: 900px;
-    margin: 5rem auto;
+    margin: 3rem auto;
     box-shadow: var(--boxShadow)
-    
-
 }
+
 
 .hero{
     width: 100%;
     display: flex;
-    flex-direction: row;
-    gap: 3rem;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem;
+    padding: 1rem;
 }
 
 
@@ -46,9 +44,9 @@ section{
     text-align: center;
 
     .info-text{
-        text-align: start;
+        text-align: center;
         & h1{
-          font-size: 2rem;
+          font-size: 4rem;
           color: var(--textColor);
           animation: slidetop 2s ease forwards;
           font-family: 'poppins';
@@ -57,10 +55,17 @@ section{
         & h3{
            margin-top: 1rem;
            color: var(--textColor);
-           font-size: 2rem;
+           font-size: 3rem;
            animation: zoomIn 2.5s ease forwards;
            font-family: 'poppins';
         }
+    }
+
+    .line{
+        width: 70%;
+        height: 1px;
+        margin: 1rem auto;
+        background-color: var(--primaryTc);
     }
 
     .day{
@@ -88,14 +93,12 @@ section{
 .imageSection{
     width: 350px;
     margin-top: 3rem;
-    animation:floatImage 4s ease-in infinite;
 
 
     & img{
-    width: 100%;
-    border-radius: 10rem;
-    opacity: 0;
-}
+     width: 100%;
+     border-radius: 10rem;
+    }
 }
 
 .date{
@@ -114,6 +117,9 @@ section{
 }
 
 
+
+
+
 @media screen and (max-width: 900px) {
     .info{
         margin-top: 4rem;
@@ -121,32 +127,26 @@ section{
 
         .info-text{
             & h1{
-            font-size: 1.3rem;
-
-            & span{
-                font-size: 1.3rem;
-            }
+            font-size: 2.5rem;
         }
             & h3{
-                font-size: 1.3rem;
-
-                & span{
-                    font-size: 1.3rem;
-                }
+                font-size: 2rem;
             }
         }
 
-        .line{
-            width: 70%;
-            height: 1px;
-            margin: 1rem auto;
-            background-color: var(--primaryTc);
-        }
+        
         
     }
-    .hero{
-        flex-direction: column;
-    }
+
+    .imageSection{
+        width: 200px;
+
+
+        & img{
+        width: 100%;
+        border-radius: 10rem;
+        }
+}
 }
 
 
@@ -155,22 +155,6 @@ section{
         margin-top: 4rem;
         text-align: center;
 
-        .info-text{
-            & h1{
-            font-size: 1rem;
-
-            & span{
-                font-size: 1rem;
-            }
-        }
-            & h3{
-                font-size: 1rem;
-
-                & span{
-                    font-size: 1rem;
-                }
-            }
-        }
 
         .line{
             width: 70%;
@@ -179,17 +163,6 @@ section{
             background-color: var(--primaryTc);
         }
         
-    }
-
-    .imageSection{
-        width: 270px;
-    }
-
-    .info{
-
-          & h3{
-            font-size: 20px;
-        }
     }
 }
 
