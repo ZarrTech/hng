@@ -11,12 +11,13 @@ const dayList = [
     'Saturuday'
 ]
 
-document.querySelector(".day").innerHTML = `It's ${dayList[day].toUpperCase()}`
+document.querySelector('[data-testid="currentDayOfTheWeek"]').innerHTML = `It's ${dayList[
+  day
+].toUpperCase()}`;
 
 
 setInterval(()=>{
   const date = Date.now()
-  document.querySelector(".time").innerHTML = date
+  document.querySelector('[data-testid="currentUTCTime"]').innerHTML = date;
 },1000)
-
 
