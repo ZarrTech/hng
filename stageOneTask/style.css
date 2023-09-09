@@ -29,18 +29,6 @@ section{
 
 }
 
-.userId{
-    position: absolute;
-    color: var(--primaryTc);
-    padding: 5px 10px;
-    font-family: var(--fontSizePrimary);
-    font-size: 40px;
-    background-color: var(--bgColor);
-    margin: -10px;
-    
-    
-}
-
 .hero{
     width: 100%;
     display: flex;
